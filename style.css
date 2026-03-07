@@ -20,6 +20,7 @@ aside {
 .profile-img {
     width: 120px;
     height: 120px;
+	object-fit: cover;
     background-color: #333; 
     margin-bottom: 20px;
     display: block;
