@@ -1,7 +1,3 @@
-/* Academic Personal Page - Final Stylesheet
-   Layout: Dark Forest Green Sidebar (Left) + White Content Box (Center)
-   Typography: Standard Sans-Serif (Arial/Helvetica)
-*/
 
 :root {
     --sidebar-bg: #1b3022;      /* Deep Forest Green */
@@ -34,10 +30,7 @@ aside {
     border-right: 1px solid rgba(255,255,255,0.1);
     overflow-y: auto;
     display: flex;
-    flex-direction: column;
-
-	align-items: center;   
-    text-align: center;     
+    flex-direction: column;   
 }
 
 .profile-img {
