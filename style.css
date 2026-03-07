@@ -1,0 +1,93 @@
+/* style.css */
+body {
+    background-color: #121212; /* Dark background */
+    color: #ffffff;
+    font-family: Arial, Helvetica, sans-serif; /* Basic fonts */
+    margin: 0;
+    display: flex;
+}
+
+/* Sidebar on the left */
+aside {
+    width: 260px;
+    padding: 40px 20px;
+    position: fixed;
+    height: 100vh;
+    box-sizing: border-box;
+    border-right: 1px solid #333;
+}
+
+.profile-img {
+    width: 120px;
+    height: 120px;
+    background-color: #333; /* Placeholder if image is missing */
+    margin-bottom: 20px;
+    display: block;
+}
+
+aside h1 {
+    font-size: 1.4rem;
+    margin: 10px 0;
+}
+
+aside p {
+    font-size: 0.9rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+nav a {
+    display: block;
+    color: #3498db;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+nav a.active {
+    color: #ffffff;
+    text-decoration: none;
+    pointer-events: none;
+}
+
+/* Content Area */
+main {
+    margin-left: 260px;
+    width: 100%;
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+/* The White Text Box */
+.content-box {
+    background-color: #ffffff;
+    color: #1a1a1a;
+    padding: 50px;
+    width: 100%;
+    max-width: 700px;
+    min-height: 80vh;
+    box-shadow: 10px 10px 0px #333; /* Basic block shadow */
+}
+
+h2 {
+    border-bottom: 2px solid #1a1a1a;
+    padding-bottom: 5px;
+}
+
+.pub-item {
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    body { flex-direction: column; }
+    aside { width: 100%; position: relative; height: auto; border-right: none; border-bottom: 1px solid #333; }
+    main { margin-left: 0; padding: 20px; }
+    .content-box { padding: 20px; }
+}
