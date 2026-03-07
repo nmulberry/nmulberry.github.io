@@ -21,6 +21,7 @@ aside {
     width: 120px;
     height: 120px;
 	object-fit: cover;
+	border-radius:50%;
     background-color: #333; 
     margin-bottom: 20px;
     display: block;
