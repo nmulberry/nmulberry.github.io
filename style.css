@@ -1,96 +1,173 @@
+/* Academic Personal Page - Final Stylesheet
+   Layout: Dark Forest Green Sidebar (Left) + White Content Box (Center)
+   Typography: Standard Sans-Serif (Arial/Helvetica)
+*/
 
-body {
-    background-color: #121212; /* Dark background */
-    color: #ffffff;
-    font-family: Arial, Helvetica, sans-serif; 
-    margin: 0;
-    display: flex;
+:root {
+    --sidebar-bg: #1b3022;      /* Deep Forest Green */
+    --sidebar-text: #ecf0f1;    /* Off-white for readability */
+    --link-color: #8fbc8f;      /* Muted Sea Green for links */
+    --link-hover: #ffffff;      /* Bright white on hover */
+    --page-bg: #121212;         /* Dark charcoal background */
+    --content-bg: #ffffff;      /* Pure white "paper" content box */
+    --text-dark: #1a1a1a;       /* Near-black for content text */
 }
 
-/* Sidebar */
+body {
+    background-color: var(--page-bg);
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    min-height: 100vh;
+}
+
+/* SIDEBAR STYLING */
 aside {
     width: 260px;
-    padding: 40px 20px;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    padding: 40px 25px;
     position: fixed;
     height: 100vh;
     box-sizing: border-box;
-    border-right: 1px solid #333;
+    border-right: 1px solid rgba(255,255,255,0.1);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
 }
 
 .profile-img {
-    width: 120px;
-    height: 120px;
-	object-fit: cover;
-	border-radius:50%;
-    background-color: #333; 
-    margin-bottom: 20px;
+    width: 150px;
+    height: 150px;
+    object-fit: cover;    
+    border-radius: 50%;    
     display: block;
+    margin-bottom: 25px;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: #333;
 }
 
 aside h1 {
-    font-size: 1.4rem;
-    margin: 10px 0;
+    font-size: 1.35rem;
+    margin: 0 0 5px 0;
+    color: #ffffff;
 }
 
 aside p {
     font-size: 0.9rem;
-    color: #bbb;
-    margin-bottom: 30px;
+    line-height: 1.4;
+    color: #bdc3c7;
+    margin: 0 0 35px 0;
 }
 
 nav a {
     display: block;
-    color: #3498db;
+    color: var(--link-color);
     text-decoration: none;
-    margin-bottom: 10px;
     font-weight: bold;
+    font-size: 0.95rem;
+    margin-bottom: 15px;
+    transition: color 0.2s;
 }
 
 nav a:hover {
+    color: var(--link-hover);
     text-decoration: underline;
 }
 
 nav a.active {
     color: #ffffff;
     text-decoration: none;
-    pointer-events: none;
+    border-left: 3px solid #ffffff;
+    padding-left: 10px;
+    margin-left: -13px; /* Pulls text back to align with others */
 }
 
-
+/* MAIN CONTENT AREA */
 main {
-    margin-left: 260px;
-    width: 100%;
-    padding: 40px;
+    margin-left: 260px; /* Aligns content to the right of fixed sidebar */
+    padding: 60px 40px;
+    flex: 1;
     display: flex;
     justify-content: center;
 }
 
-
 .content-box {
-    background-color: #ffffff;
-    color: #1a1a1a;
-    padding: 50px;
+    background-color: var(--content-bg);
+    color: var(--text-dark);
+    padding: 50px 60px;
     width: 100%;
-    max-width: 700px;
-    min-height: 80vh;
-    box-shadow: 10px 10px 0px #333; 
+    max-width: 750px;
+    min-height: 85vh;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+    box-sizing: border-box;
 }
 
 h2 {
-    border-bottom: 2px solid #1a1a1a;
-    padding-bottom: 5px;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #000;
+    padding-bottom: 10px;
+    margin-top: 0;
+    margin-bottom: 30px;
 }
 
-.pub-item {
+h3 {
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-top: 40px;
     margin-bottom: 15px;
-    line-height: 1.4;
+    color: #333;
 }
 
-/* mobile? */
-@media (max-width: 768px) {
-    body { flex-direction: column; }
-    aside { width: 100%; position: relative; height: auto; border-right: none; border-bottom: 1px solid #333; }
-    main { margin-left: 0; padding: 20px; }
-    .content-box { padding: 20px; }
+p {
+    line-height: 1.6;
+    margin-bottom: 20px;
 }
 
+.pub-item, .cv-entry {
+    display: block;          
+    margin-bottom: 35px;     
+    line-height: 1.5;
+}
+
+
+.date {
+    display: block;
+    font-weight: bold;
+    color: #666;
+    margin-top: 5px;
+    font-size: 0.9rem;
+}
+
+@media (max-width: 850px) {
+    body {
+        flex-direction: column;
+    }
+    aside {
+        width: 100%;
+        position: relative;
+        height: auto;
+        padding: 30px;
+        border-right: none;
+        border-bottom: 1px solid #333;
+        align-items: center;
+        text-align: center;
+    }
+    main {
+        margin-left: 0;
+        padding: 20px;
+    }
+    .content-box {
+        padding: 30px 20px;
+    }
+    nav a.active {
+        border-left: none;
+        border-bottom: 2px solid #fff;
+        padding-left: 0;
+        margin-left: 0;
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+}
