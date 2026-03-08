@@ -1,12 +1,12 @@
 
 :root {
-    --sidebar-bg: #1b3022;      /* Deep Forest Green */
-    --sidebar-text: #ecf0f1;    /* Off-white for readability */
-    --link-color: #8fbc8f;      /* Muted Sea Green for links */
-    --link-hover: #ffffff;      /* Bright white on hover */
-    --page-bg: #121212;         /* Dark charcoal background */
-    --content-bg: #ffffff;      /* Pure white "paper" content box */
-    --text-dark: #1a1a1a;       /* Near-black for content text */
+    --sidebar-bg: #1b3022;      /* Forest Green */
+    --sidebar-text: #ecf0f1;    
+    --link-color: #8fbc8f;      /* Sea Green */
+    --link-hover: #ffffff;     
+    --page-bg: #1b3022;         
+    --content-bg: #ffffff;     
+    --text-dark: #1a1a1a;      
 }
 
 body {
