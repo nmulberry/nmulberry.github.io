@@ -6,7 +6,7 @@
     --sidebar-text: #ecf0f1;
     --link-color: #8fbc8f;      /* Muted Sea Green */
     --link-hover: #ffffff;
-    --page-bg: #8fbc8f;
+    --page-bg: #ffffff; /* #8fbc8f;*/
     --content-bg: #ffffff;
     --text-dark: #1a1a1a;
 }
@@ -131,9 +131,9 @@ main {
     color: var(--text-dark);
     padding: 50px 60px;
     width: 100%;
-    max-width: 750px;
+    max-width: 950px;
     min-height: 85vh;
-    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+/*    box-shadow: 0 10px 40px rgba(0,0,0,0.4);*/
     box-sizing: border-box;
 }
 
@@ -168,8 +168,9 @@ p {
 /* LIST ITEMS (PUBLICATIONS & CV) */
 .pub-item, .cv-entry {
     display: block;
-    margin-bottom: 20px; 
+    margin-bottom: 10px; 
     line-height: 1.7;
+    font-size: 0.85rem;
 }
 .date {
     display: block;
